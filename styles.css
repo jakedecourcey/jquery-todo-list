@@ -1,9 +1,55 @@
+/*reset*/
+
+/**/
+
+/**/
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/*Basics----------------------------------------------------------*/
+
+/**/
+
+/**/
+
 body {
   background: #0077EE;
   font-family: 'Patrick Hand', cursive;
-  height: 100%;
   padding: 120px;
 }
+
+/*layout*/
+
+/**/
+
+.card {
+  background: whitesmoke;
+  box-shadow: 10px 10px #333;
+  margin: auto;
+  transition: all 500ms;
+  width: 360px;
+}
+
+.card-header {
+  background: #444;
+  height: 18%;
+}
+
+.card-body {
+  height: 82%;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.raised {
+  transform: translateY(-400px);
+}
+
+/*text*/
+/**/
+/**/
 
 h1 {
   color: white;
@@ -27,12 +73,14 @@ li {
   cursor: pointer;
   padding: 5px;
   padding-left: 15px;
+  border-bottom: 1px solid #BBB;
 }
 
 .input-box {
   display: flex;
   position: relative;
   top: -22px;
+  border-bottom: 1px solid #BBB;
 }
 
 input {
@@ -45,6 +93,11 @@ input {
   padding-left: 15px;
 }
 
+/*buttons*/
+
+/**/
+
+/**/
 
 button {
   background: #0077EE;
@@ -86,22 +139,49 @@ button {
 }
 
 .completed {
+  color: #666;
   text-decoration: line-through;
 }
 
-.card {
-  background: whitesmoke;
-  box-shadow: 10px 10px #333;
-  margin: auto;
-  width: 360px;
-}
-
-.card-header {
-  background: #444;
-}
-
-.card-body {
-  padding-bottom: 40px;
+.your-name {
+  font-size: 2rem;
+  top: -22px;
   position: relative;
-  height: 300px;
+  width: 100%;
+}
+
+.swatch-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0 52px 0;
+}
+
+.color-swatch {
+  border-radius: 20px;
+  height: 90px;
+  width: 90px;
+}
+
+.red {
+  background-color: #EE4455;
+}
+
+.green {
+  background-color: #55AA55;
+}
+
+.blue {
+  background-color: #0077EE;
+}
+
+.save-button {
+  font-size: 2rem;
+  width: 100%;
+}
+
+.settings-screen {
+  background-color: #DDD;
+  opacity: 0;
+  width: 360px;
+  z-index: 999;
 }

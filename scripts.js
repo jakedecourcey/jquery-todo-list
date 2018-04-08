@@ -1,3 +1,5 @@
+var mainColor = '#0077EE';
+
 function addListItem() {
   let newItem = $('.add-item').val();
   if (newItem) {
@@ -16,8 +18,17 @@ function cleanUpCompletedItems() {
 }
 
 function revealSettingsScreen() {
-  $('.settings-screen').css('display', 'none');
-  // $('.settings-screen').css('display', 'block');
+  $('.settings-screen').css('opacity', '1');
+  $('.main-card').removeClass('raised');
+}
+
+function saveSettings() {
+  $('.settings-screen').css('opacity', '0');
+  $('.main-card').addClass('raised');
+  let userName = $('.your-name').val();
+  if (userName) {
+    $('.nameplate').text(userName + "'s ToDo List");
+  }
 }
 
 $('.cleanup-button').on('mouseover', function() {
@@ -26,7 +37,7 @@ $('.cleanup-button').on('mouseover', function() {
 })
 $('.cleanup-button').on('mouseout', function() {
   $(this).removeClass('revealed');
-  $(this).css('background', '#0077EE');
+  $(this).css('background', mainColor);
 })
 $('.cleanup-button').click(cleanUpCompletedItems);
 
@@ -36,14 +47,26 @@ $('.settings-button').on('mouseover', function() {
 $('.settings-button').on('mouseout', function() {
   $(this).removeClass('revealed');
 })
-$('settings-button').on('click', revealSettingsScreen);
+$('.settings-button').on('click', revealSettingsScreen);
+
+$('.save-button').on('click', saveSettings);
 
 $('li').click(function() {
   $(this).toggleClass('completed');
 });
+
 $('.add-button').click(addListItem);
+
 $('input').keypress(function(event) {
   if (event.which === 13) {
     addListItem();
   }
+});
+
+$('.color-swatch').on('click', function() {
+  mainColor = $(this).css('backgroundColor');
+  $('body').css('backgroundColor', mainColor);
+  $('button').css('backgroundColor', mainColor);
+  $('.settings-button').css('backgroundColor', mainColor);
+  $('.cleanup-button').css('backgroundColor', mainColor);
 });

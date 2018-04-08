@@ -13,18 +13,27 @@
 </head>
 
 <body>
-  <div class="card">
-    <div class="settings-screen">
-      Stuff
-    </div>
+  <div class="card settings-screen">
     <div class="card-header">
-      <h1>ToDo List</h1>
+      <h1>Settings</h1>
+    </div>
+    <input type="text" class="your-name" placeholder="Your Name">
+    <div class="swatch-row">
+      <div class="color-swatch red"></div>
+      <div class="color-swatch green"></div>
+      <div class="color-swatch blue"></div>
+    </div>
+    <button class="save-button">Save & Exit</button>
+  </div>
+  <div class="card main-card raised">
+    <div class="card-header">
+      <h1 class='nameplate'>ToDo List</h1>
     </div>
     <div class="card-body">
       <div class="input-box">
-      <input type="text" class="add-item" placeholder="Add new item...">
-      <button class="add-button">Add</button>
-    </div>
+        <input type="text" class="add-item" placeholder="Add new item...">
+        <button class="add-button">Add</button>
+      </div>
       <ul>
         <li>Sample item one</li>
         <li>Sample item two</li>
