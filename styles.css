@@ -1,0 +1,107 @@
+body {
+  background: #0077EE;
+  font-family: 'Patrick Hand', cursive;
+  height: 100%;
+  padding: 120px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Permanent Marker', sans-serif;
+  padding: 20px;
+  z-index: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -22px;
+  height: 300px;
+  overflow: auto;
+}
+
+li {
+  background: #DDD;
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+.input-box {
+  display: flex;
+  position: relative;
+  top: -22px;
+}
+
+input {
+  border: none;
+  color: #555;
+  flex: 1 0 0;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1rem;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+
+button {
+  background: #0077EE;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 3px 15px;
+}
+
+.cleanup-button {
+  position: absolute;
+  clip-path: inset(0 0 12px 12px);
+  bottom: -12px;
+  left: -12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 80px;
+  transition: all 500ms;
+  z-index: 44;
+}
+
+.settings-button {
+  position: absolute;
+  clip-path: inset(0 12px 12px 0);
+  bottom: -12px;
+  right: -12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 80px;
+  transition: all 500ms;
+  z-index: 44;
+}
+
+.revealed {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.card {
+  background: whitesmoke;
+  box-shadow: 10px 10px #333;
+  margin: auto;
+  width: 360px;
+}
+
+.card-header {
+  background: #444;
+}
+
+.card-body {
+  padding-bottom: 40px;
+  position: relative;
+  height: 300px;
+}
