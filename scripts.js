@@ -3,7 +3,8 @@ var mainColor = '#0077EE';
 function addListItem() {
   let newItem = $('.add-item').val();
   if (newItem) {
-    $('li').last().after('<li>' + newItem + '</li>');
+    $('li').last().after('<li></li>');
+    $('li').last().text(newItem);
     $('li').last().click(function() {
       $(this).toggleClass('completed');
     });
@@ -51,11 +52,11 @@ $('.settings-button').on('click', revealSettingsScreen);
 
 $('.save-button').on('click', saveSettings);
 
-$('li').click(function() {
+$('li').on('click', function() {
   $(this).toggleClass('completed');
 });
 
-$('.add-button').click(addListItem);
+$('.add-button').on('click', addListItem);
 
 $('input').keypress(function(event) {
   if (event.which === 13) {
